@@ -1,6 +1,23 @@
 @import 'bootstrap/dist/css/bootstrap';
+@import "font-awesome";
 
 .navbar-brand
 {
   font-size: 2rem;
+}
+.search-area
+{
+  padding-top: 40px;
+}
+.market-title
+{
+  padding-top: 20px;
+}
+.left-padding
+{
+  padding-left: 1 !important;
+}
+.right-padding
+{
+  padding-right: 1 !important;
 }

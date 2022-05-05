@@ -1,2 +1,22 @@
-<h1>Users#my_market</h1>
-<p>Find me in app/views/users/my_market.html.erb</p>
+<div class='market-title'>
+  <h1>My Market</h1>
+</div>
+
+<div class='search-area'>
+  <h3>Stock Finder</h3>
+  <%= form_tag '#', method: :get do %>
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <%= text_field_tag :stock, params[:stock], placeholder: "Stock symbol", autofocus: true, class: "form-control form-control-lg" %>
+      </div>
+      <div class="col-sm-3">
+        <%= button_tag type: :submit, class: "btn btn-info btn-lg" do %>
+          <%= fa_icon "search" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
