@@ -5,7 +5,7 @@ class Stock < ApplicationRecord
       publishable_token: Rails.application.credentials.iex_client[:sandbox_api_key],
       endpoint: 'https://sandbox.iexapis.com/v1'
     )
-    client.price(stock_symbol)
+    new(symbol: stock_symbol, name: client.company(stock_symbol).company_name, latest_price: client.price(stock_symbol))
   end
 
 end
