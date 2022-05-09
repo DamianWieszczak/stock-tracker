@@ -16,4 +16,8 @@ validates :name, :symbol, presence: true
     end
   end
   
+  def self.check_db(stock_symbol)
+    where(symbol: stock_symbol).first
+  end
+
 end
