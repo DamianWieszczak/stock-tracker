@@ -6,7 +6,7 @@
   <h3>Stock Finder</h3>
   <%= form_tag find_stock_path, remote: true, method: :get do %>
     <div class="form-group row">
-      <div class="col-sm-6">
+      <div class="col-sm-7">
         <%= text_field_tag :stock, params[:stock], placeholder: "Stock symbol", autofocus: true, class: "form-control form-control-lg" %>
       </div>
       <div class="col-sm-3">
