@@ -15,5 +15,5 @@ validates :name, :symbol, presence: true
       return nil
     end
   end
-
+  
 end
