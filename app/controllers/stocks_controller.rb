@@ -8,12 +8,16 @@ class StocksController < ApplicationController
           format.js { render partial: 'users/result'}
         end
       else
-        flash[:alert] = "Please enter a valid symbol to find"
-        redirect_to my_market_path
+        respond_to do |format|
+          flash.now[:alert] = "Please enter a valid symbol to find"
+          format.js { render partial: 'users/result'}
+        end
       end
     else
-      flash[:alert] = "Please enter a company symbol to find"
-      redirect_to my_market_path
+      respond_to do |format|
+        flash.now[:alert] = "Please enter a symbol to search"
+        format.js { render partial: 'users/result'}
+      end
     end
   end
 
