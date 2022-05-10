@@ -4,5 +4,5 @@
 
 <p>
   This is a stock tracker app created using the Ruby on Rails framework for web development and styled using bootstrap.
-  App based on the "Rails Developer Course" and used for self-study
+  App based on the "Ruby on Rails Developer Course" and used for self-study
 </p>
