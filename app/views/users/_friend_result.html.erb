@@ -12,9 +12,9 @@
             <td><strong>Email: </strong> <%= friend.email %></td>
             <td><strong>Actions: </strong> <%= link_to "View Profile", '#', class: "btn-sm btn-info" %>
               <% if current_user.not_friends_with?(friend.id) %>
-                <%= link_to "Add to Friend", '#',  class: "btn-sm btn-success ml-2", method: :post %>
+                <%= link_to "Add to Friend", friendships_path(friend: friend),  class: "btn-sm btn-success ml-2", method: :post %>
               <% else %>
-                <span class="badge badge-info">
+                <span class="ml-2 badge badge-info">
                 You are friends
               <% end %>
             </td>
